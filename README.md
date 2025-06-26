@@ -75,7 +75,7 @@ Este projeto verifica automaticamente os próximos jogos do São Paulo Futebol C
 1. **Clone o repositório:**
 
     ```bash
-    git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
+    git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
     cd SEU-REPOSITORIO
     ```
 
