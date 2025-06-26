@@ -76,7 +76,7 @@ Este projeto verifica automaticamente os próximos jogos do São Paulo Futebol C
 
     ```bash
     git clone https://github.com/Vini-Paixao/Bot-SaoPaulo
-    cd SEU-REPOSITORIO
+    cd Bot-SaoPaulo
     ```
 
 2. **Crie e ative um ambiente virtual (recomendado):**
