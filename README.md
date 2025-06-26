@@ -1,25 +1,29 @@
-# Bot de Agenda de Jogos do São Paulo <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png" width="25px"> - <img align="center" alt="Vini-Python" width="30px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+# Bot de Agenda de Jogos do São Paulo <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png" width="25px" alt="Logo SP"> - <img align="center" alt="Vini-Python" width="30px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+<img src="https://i.namu.wiki/i/ERiBtFg1CI8uCA2WQjlo25QR7pHAP6KPE271lVupZxa3AvVq_uvexbiMIZD-UYUPkGwF1dCmiLqsA5wQ0XQYzQ.webp" width="100px" alt="Logo Libertadores">
+<img src="https://www.ogol.com.br/img/logos/competicoes/51_imgbank_d1_20250313102859.png" width="100px" alt="Logo Brasileirão">
+
+<br>
 Este é um bot em Python que verifica automaticamente os próximos jogos do São Paulo Futebol Clube nas competições: **Libertadores** e **Brasileirão** e cria eventos no seu Google Calendar. Nunca mais perca um jogo!
 
 *Caso queira é possível alterar o Time em questão alterando no arquivo `config.json` o ID do Time que pode ser recuperado da API Football-data ([IDs dos Times](https://dashboard.api-football.com/soccer/ids/teams))*
 
 ## Sumário
 
-- [Funcionalidades](https://www.google.com/search?q=%23funcionalidades)
-- [Tecnologias Utilizadas](https://www.google.com/search?q=%23tecnologias-utilizadas)
-- [Pré-requisitos](https://www.google.com/search?q=%23pr%C3%A9-requisitos)
-- [Instalação](https://www.google.com/search?q=%23instala%C3%A7%C3%A3o)
-- [Obtenção das Chaves de API](https://www.google.com/search?q=%23obten%C3%A7%C3%A3o-das-chaves-de-api)
-  - [1. API-Football (football-data.org)](https://www.google.com/search?q=%231-api-football-football-dataorg)
-  - [2. Google Calendar API](https://www.google.com/search?q=%232-google-calendar-api)
-  - [3. Pushbullet](https://www.google.com/search?q=%233-pushbullet)
-- [Configuração do Projeto](https://www.google.com/search?q=%23configura%C3%A7%C3%A3o-do-projeto)
-- [Executando o Bot](https://www.google.com/search?q=%23executando-o-bot)
-- [Contribuição](https://www.google.com/search?q=%23contribui%C3%A7%C3%A3o)
-- [Licença](https://www.google.com/search?q=%23licen%C3%A7a)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Obtenção das Chaves de API](#obtenção-das-chaves-de-api)
+  - [1. API-Football (football-data.org)](#1-api-football)
+  - [2. Google Calendar API](#2-google-calendar-api)
+  - [3. Pushbullet](#3-pushbullet)
+- [Configuração do Projeto](#configuração-do-projeto)
+- [Executando o Bot](#executando-o-bot)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
 ## Funcionalidades
 
@@ -38,7 +42,7 @@ Este é um bot em Python que verifica automaticamente os próximos jogos do São
 - **APIs Externas**:
   - [API-Football (football-data.org)](https://www.football-data.org/)
   - [Google Calendar API](https://developers.google.com/calendar/api/guides/overview)
-  - [Pushbullet API](https://www.google.com/search?q=https://docs.pushbullet.com/)
+  - [Pushbullet API](https://www.pushbullet.com/)
 
 - **Bibliotecas Python**: `requests`, `google-api-python-client`, `google-auth-oauthlib`, `pytz`.
 
@@ -91,7 +95,7 @@ Este é um bot em Python que verifica automaticamente os próximos jogos do São
 
 Para que o bot funcione, você precisa obter chaves de API para os serviços que ele utiliza.
 
-### 1\. API-Football (football-data.org)
+### 1\. API-Football
 
 Esta API fornece os dados sobre os jogos de futebol.
 
