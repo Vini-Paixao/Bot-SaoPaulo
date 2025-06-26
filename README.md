@@ -1,14 +1,30 @@
-# Bot de Agenda de Jogos do São Paulo <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png" width="25px" alt="Logo SP"> - <img align="center" alt="Vini-Python" width="30px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png" width="100px" alt="Logo SPFC">
+  <h1>Bot de Agenda de Jogos do São Paulo</h1>
+  <p>Um bot em Python que automatiza a criação de eventos no seu Google Calendar para os jogos do Tricolor!</p>
+  
+  <p>
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
+    </a>
+    <img src="https://img.shields.io/badge/Python-3.7+-blue.svg" alt="Python Version">
+  </p>
+</div>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-<img src="https://i.namu.wiki/i/ERiBtFg1CI8uCA2WQjlo25QR7pHAP6KPE271lVupZxa3AvVq_uvexbiMIZD-UYUPkGwF1dCmiLqsA5wQ0XQYzQ.webp" width="100px" alt="Logo Libertadores">
-<img src="https://www.ogol.com.br/img/logos/competicoes/51_imgbank_d1_20250313102859.png" width="100px" alt="Logo Brasileirão">
+<div align="center">
+  <h3>Competições Suportadas</h3>
+  <img src="https://i.namu.wiki/i/ERiBtFg1CI8uCA2WQjlo25QR7pHAP6KPE271lVupZxa3AvVq_uvexbiMIZD-UYUPkGwF1dCmiLqsA5wQ0XQYzQ.webp" width="100px" alt="Logo Libertadores">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://www.ogol.com.br/img/logos/competicoes/51_imgbank_d1_20250313102859.png" width="100px" alt="Logo Brasileirão">
+</div>
 
 <br>
-Este é um bot em Python que verifica automaticamente os próximos jogos do São Paulo Futebol Clube nas competições: **Libertadores** e **Brasileirão** e cria eventos no seu Google Calendar. Nunca mais perca um jogo!
 
-*Caso queira é possível alterar o Time em questão alterando no arquivo `config.json` o ID do Time que pode ser recuperado da API Football-data ([IDs dos Times](https://dashboard.api-football.com/soccer/ids/teams))*
+Este projeto verifica automaticamente os próximos jogos do São Paulo Futebol Clube e cria eventos detalhados na sua agenda do Google. Ideal para nunca mais perder uma partida importante!
+
+*Caso queira, é possível alterar o time e as competições facilmente no arquivo `config.json`. Os IDs necessários podem ser encontrados na documentação da API Football-data.*
+
+---
 
 ## Sumário
 
@@ -17,43 +33,41 @@ Este é um bot em Python que verifica automaticamente os próximos jogos do São
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Obtenção das Chaves de API](#obtenção-das-chaves-de-api)
-  - [1. API-Football (football-data.org)](#1-api-football)
-  - [2. Google Calendar API](#2-google-calendar-api)
-  - [3. Pushbullet](#3-pushbullet)
 - [Configuração do Projeto](#configuração-do-projeto)
-- [Executando o Bot](#executando-o-bot)
+- [Executando o Bot](#executando)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
 
 ## Funcionalidades
 
 - **Busca de Jogos**: Conecta-se à API da [football-data.org](https://www.football-data.org/) para encontrar jogos agendados.
-
-- **Agenda Inteligente**: Cria eventos no Google Calendar para cada jogo, evitando a criação de eventos duplicados se o jogo já estiver na agenda.
-
+- **Agenda Inteligente**: Cria eventos no Google Calendar para cada jogo, evitando a criação de eventos duplicados.
 - **Notificações**: Envia notificações via [Pushbullet](https://www.pushbullet.com/) quando um novo jogo é adicionado à agenda (opcional).
-
-- **Altamente Configurável**: Todas as chaves de API, IDs e preferências são gerenciadas em um único arquivo `config.json`, facilitando a personalização.
+- **Altamente Configurável**: Todas as chaves de API, IDs e preferências são gerenciadas em um único arquivo `config.json`.
 
 ## Tecnologias Utilizadas
 
-- **Linguagem**: Python 3.7+
+<p align="left">
+  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="30" height="30"/>
+  </a>
+  <a href="https://developers.google.com/calendar" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/google/google-original.svg" alt="google" width="30" height="30"/>
+  </a>
+</p>
 
+- **Linguagem**: Python 3.7+
 - **APIs Externas**:
   - [API-Football (football-data.org)](https://www.football-data.org/)
   - [Google Calendar API](https://developers.google.com/calendar/api/guides/overview)
   - [Pushbullet API](https://www.pushbullet.com/)
-
 - **Bibliotecas Python**: `requests`, `google-api-python-client`, `google-auth-oauthlib`, `pytz`.
 
 ## Pré-requisitos
 
 - [Python 3.7](https://www.python.org/downloads/) ou superior instalado.
-
 - Uma conta no Google para usar a Agenda.
-
-- Conta no [football-data.org](https://www.football-data.org/) (o plano gratuito é suficiente).
-
+- Conta no [football-data.org](https://www.football-data.org/) (o plano gratuito é suficiente para ligas europeias).
 - Conta no [Pushbullet](https://www.pushbullet.com/) (opcional, para notificações).
 
 ## Instalação
@@ -61,7 +75,7 @@ Este é um bot em Python que verifica automaticamente os próximos jogos do São
 1. **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+    git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
     cd SEU-REPOSITORIO
     ```
 
@@ -75,91 +89,43 @@ Este é um bot em Python que verifica automaticamente os próximos jogos do São
     source venv/bin/activate
     ```
 
-3. **Instale as dependências a partir do arquivo `requirements.txt`:**
+3. **Instale as dependências:**
 
     ```bash
     pip install -r requirements.txt
-    ```
-
-    *Se o arquivo `requirements.txt` não existir, crie-o com o seguinte conteúdo:*
-
-    ```text
-    google-api-python-client
-    google-auth-httplib2
-    google-auth-oauthlib
-    requests
-    pytz
     ```
 
 ## Obtenção das Chaves de API
 
 Para que o bot funcione, você precisa obter chaves de API para os serviços que ele utiliza.
 
-### 1\. API-Football
+### 1. API-Football
 
-Esta API fornece os dados sobre os jogos de futebol.
+1. Acesse [football-data.org](https://www.football-data.org/client/register) e registre-se.
+2. Após o login, copie sua chave na seção "API Key" do seu perfil.
 
-1. Acesse [football-data.org](https://www.football-data.org/client/register) e registre-se para obter uma conta. O nível gratuito ("Tier One") é suficiente para este projeto.
-2. Após o login, vá para a sua página de **Perfil (Profile)**.
-3. Sua chave de API estará visível na seção "API Key".
-4. Copie esta chave. Você a usará no arquivo `config.json`.
+### 2. Google Calendar API
 
-### 2\. Google Calendar API
-
-Esta é a parte mais complexa. Vamos criar uma "Conta de Serviço" que dará ao nosso script permissão para gerenciar seus eventos da agenda.
+É necessário criar uma "Conta de Serviço" que dará ao script permissão para gerenciar seus eventos.
 
 1. **Acesse o Google Cloud Console**: Vá para [https://console.cloud.google.com/](https://console.cloud.google.com/).
+2. **Crie um Novo Projeto** e **ative a API do Google Calendar** para ele.
+3. **Crie uma Conta de Serviço**:
+    - Vá para **APIs e serviços > Credenciais > CRIAR CREDENCIAIS > Conta de serviço**.
+    - Siga os passos e, ao final, gere uma **nova chave do tipo JSON**.
+    - Guarde este arquivo `.json` em um local seguro.
+4. **Compartilhe sua Agenda do Google**:
+    - Nas configurações da sua agenda, encontre o e-mail da conta de serviço criada.
+    - Adicione este e-mail à lista de compartilhamento com a permissão **"Fazer alterações nos eventos"**.
 
-2. **Crie um Novo Projeto**: Se você não tiver um, clique em "Selecionar um projeto" na barra superior e depois em "NOVO PROJETO". Dê um nome a ele (ex: "Bot Agenda de Jogos") e clique em "CRIAR".
+### 3. Pushbullet
 
-3. **Ative a API do Google Calendar**:
-      - No menu de navegação à esquerda, vá para **APIs e serviços \> Biblioteca**.
-      - Procure por "Google Calendar API" e clique nela.
-      - Clique no botão **ATIVAR**.
-
-4. **Crie as Credenciais (Conta de Serviço)**:
-      - No menu de navegação, vá para **APIs e serviços \> Credenciais**.
-      - Clique em **+ CRIAR CREDENCIAIS** e selecione **Conta de serviço**.
-      - Dê um nome à sua conta de serviço (ex: `bot-calendario`) e uma descrição. Clique em **CRIAR E CONTINUAR**.
-      - Na seção de permissões (Passo 2), não é necessário adicionar um papel. Apenas clique em **CONTINUAR**.
-      - Na seção "Conceder aos usuários acesso a esta conta de serviço" (Passo 3), clique em **CONCLUÍDO**.
-
-5. **Gere a Chave da Conta de Serviço**:
-      - Na tela de "Credenciais", você verá a conta de serviço que acabou de criar. Clique nela.
-      - Vá para a aba **CHAVES**.
-      - Clique em **ADICIONAR CHAVE \> Criar nova chave**.
-      - Selecione o tipo **JSON** e clique em **CRIAR**.
-      - Um arquivo `.json` será baixado para o seu computador. **Guarde este arquivo em um local seguro\!** Este arquivo contém as credenciais que seu script usará.
-
-6. **Compartilhe sua Agenda do Google**:
-      - Abra sua [Agenda do Google](https://calendar.google.com/).
-      - Encontre o e-mail da sua conta de serviço. Ele está nos detalhes da conta de serviço no Google Cloud Console e se parece com `nome-da-conta@seu-projeto.iam.gserviceaccount.com`.
-      - Na sua agenda, encontre o calendário que deseja usar, clique nos três pontos (Opções) e vá para **Configurações e compartilhamento**.
-      - Role para baixo até "Compartilhar com pessoas específicas" e clique em **+ Adicionar pessoas**.
-      - Cole o e-mail da conta de serviço e, em "Permissões", selecione **Fazer alterações nos eventos**.
-      - Clique em **Enviar**.
-
-### 3\. Pushbullet
-
-Serviço opcional para receber notificações no seu celular ou desktop.
-
-1. Acesse [Pushbullet.com](https://www.pushbullet.com/) e faça login com sua conta do Google.
-
-2. Vá para **Settings \> Account**.
-
-3. Role para baixo até a seção **Access Tokens** e clique em **Create Access Token**.
-
-4. Copie o token gerado.
+1. Acesse [Pushbullet.com](https://www.pushbullet.com/).
+2. Em **Settings > Account**, crie um **Access Token** e copie o valor.
 
 ## Configuração do Projeto
 
-Agora que você tem todas as chaves, é hora de configurar o bot.
-
-1. No diretório do projeto, crie um arquivo chamado `config.json`.
-
-2. Copie e cole a estrutura abaixo no seu `config.json` e preencha com as informações que você coletou.
-
-<!-- end list -->
+Crie um arquivo `config.json` na raiz do projeto e preencha com suas chaves e preferências.
 
 ```json
 {
@@ -174,6 +140,7 @@ Agora que você tem todas as chaves, é hora de configurar o bot.
     "access_token": "SEU_TOKEN_DO_PUSHBULLET_AQUI"
   },
   "team_settings": {
+    "team_id": 126,
     "team_name": "São Paulo FC",
     "competitions": [
       2013,
@@ -187,21 +154,9 @@ Agora que você tem todas as chaves, é hora de configurar o bot.
     "color_id": "11"
   }
 }
-```
+````
 
-- **`api_football.token`**: A chave que você obteve do football-data.org.
-
-- **`google_calendar.service_account_file`**: O caminho relativo ou absoluto para o arquivo `.json` que você baixou do Google Cloud.
-
-- **`google_calendar.calendar_id`**: O ID do seu calendário. Para o calendário principal, é seu endereço de e-mail. Para outros, encontre em "Configurações e compartilhamento \> Integrar agenda".
-
-- **`pushbullet.access_token`**: O token que você gerou no Pushbullet. Deixe em branco (`""`) se não quiser usar notificações.
-
-- **`team_settings`**: Personalize com o nome do seu time e os IDs das competições que deseja acompanhar.
-
-- **`event_settings`**: Personalize o título, duração, lembretes e cor dos eventos na agenda.
-
-## Executando o Bot
+## Executando
 
 Com tudo configurado, basta executar o script no seu terminal:
 
@@ -209,7 +164,7 @@ Com tudo configurado, basta executar o script no seu terminal:
 python jogos_sp_agenda.py
 ```
 
-Você pode automatizar a execução deste script usando `cron` (Linux/macOS) ou Agendador de Tarefas (Windows) para que ele verifique por novos jogos periodicamente.
+Você pode automatizar a execução deste script usando `cron` (Linux/macOS) ou Agendador de Tarefas (Windows).
 
 ## Contribuição
 
